@@ -1,0 +1,51 @@
+body{ /* body 기본 속성이 margin 8px이므로, 별도의 마진 설정 필요 */
+    margin: 0px;
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat; /* 이미지가 화면을 덜 채웅게 될 경우
+                                     자동으로 붙여넣기를 하게 되는데, 이것을 막아주는 기능 */
+    background-size: cover; /* 이미지 하나가 화면 전체를 덮도록 하는 기능 */
+}
+
+.container{
+    background-color: white;
+    min-height: 100vh; /* view height => 유저가 보는 화면의 높이만큼을 의미
+                        100vh는 100% 높이 즉, 화면 전체 높이를 말함 */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.task-area{
+    border: 1px solid lightgray;
+}
+
+
+.task-tabs{
+    display: flex; /* 가로 정렬 */
+    border-bottom: 1px solid lightgray; /* Done과 task 사이에 구분선을 위함 */
+    position: relative;
+}
+
+.task-tabs div{
+    padding: 1em; 
+}
+
+#under-line{ /* class가 아닌 id이므로 앞에 #을 붙임 */
+             /* 클릭하면 움직이는 줄 생성 */
+    height: 4px;
+    background-color: pink;
+    position: absolute;
+    width: 80px;
+    left: 0px;
+    top: 52px;
+    padding: 0px;
+}
+
+.task{
+    display: flex;
+    justify-content: space-between; /* 간격을 최대한 벌려주는 기능  */
+                                    /* 여기서는 Check, Delete 버튼을 오른쪽 끝으로 보내는 역할 */
+    padding: 1em;
+}
+
+.task-done{
+    text-decoration: line-through; /* 취소선 */
+}
