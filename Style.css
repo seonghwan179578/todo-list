@@ -51,5 +51,5 @@ body{ /* body 기본 속성이 margin 8px이므로, 별도의 마진 설정 필�
 }
 
 .task-tabs div{ /* task-tabs 이하 id의 div태그에 적용 */
-    cursor: pointer;
+    cursor: pointer; /* 마우스 커서 모양 변경 */
 }
