@@ -41,10 +41,10 @@ function addTask() {
 // UI를 업데이트해주는 역할
 function render() {
     let list = []
-    if(mode == "all") {
-        list = taskList // taskList => 오리지널 리스트
-    } else if(mode == "ongoing" || mode == "done") {
-        list = filterList
+    if(mode == "all") { // mode가 all이면
+        list = taskList // list 변수의 배열에 taskList를 push  // taskList => 오리지널 리스트
+    } else if(mode == "ongoing" || mode == "done") { // mode가 ongoing이나 done이면
+        list = filterList // filterList 즉, 조건에 맞게 ongoing이나 done 리스트만 push
     }
 
 
